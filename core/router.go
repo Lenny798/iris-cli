@@ -9,4 +9,5 @@ import (
 func InitRouter(app *iris.Application) {
 	baseUrl := "/api/v1"
 	mvc.New(app.Party(baseUrl + "/demo")).Handle(controller.NewDemoController())
+	mvc.New(app.Party(baseUrl + "/user")).Handle(controller.NewUserController())
 }
